@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useState } from "react";
-import { Transfer_SurveyList } from "../Assets/Survey/TransferSurveyList";
-import { Layout } from "../GlobalStyle/Layout";
-import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
-import { SurveyResponse } from "../Components/TransferSurvey/SurveyResponse";
+import { Transfer_SurveyList } from "../../../Assets/Survey/TransferSurveyList";
+import { Layout } from "../../../GlobalStyle/Layout";
+import { SurveyResponse } from "../../../Components/Assign/Transfer/TransferSurvey/SurveyResponse";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { ProgressBar } from "../Components/TransferSurvey/ProgressBar";
-import { AlertModal } from "../GlobalStyle/AlertModal";
+import { ProgressBar } from "../../../Components/Assign/Transfer/TransferSurvey/ProgressBar";
+import { SurveyHeader } from "../../../GlobalStyle/SurveyHeader";
 
 export const TransferSurvey = () => {
   const navigate = useNavigate();

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Layout } from "../GlobalStyle/Layout";
-import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
-import TransferImage from "../Assets/Image/Transfer_Result.png";
-import { TextModal } from "../GlobalStyle/TextModal";
+import { Layout } from "../../../GlobalStyle/Layout";
+import { SurveyHeader } from "../../../GlobalStyle/SurveyHeader";
+import TransferImage from "../../../Assets/Image/Transfer_Result.png";
+import { TextModal } from "../../../GlobalStyle/TextModal";
 import { useNavigate } from "react-router-dom";
 
 export const TransferSurveyResult = () => {

@@ -59,4 +59,7 @@ const FlexBox = styled.div`
   .icon {
     color: var(--color-thickSub);
   }
+  :hover {
+    cursor: pointer;
+  }
 `;

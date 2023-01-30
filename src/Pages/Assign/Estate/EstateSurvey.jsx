@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useState } from "react";
-import { Estate_SurveyList } from "../Assets/Survey/EstateSurveyList";
-import { Layout } from "../GlobalStyle/Layout";
-import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
-import { SurveyResponse } from "../Components/TransferSurvey/SurveyResponse";
+import { Estate_SurveyList } from "../../../Assets/Survey/EstateSurveyList";
+import { Layout } from "../../../GlobalStyle/Layout";
+import { SurveyHeader } from "../../../GlobalStyle/SurveyHeader";
+import { SurveyResponse } from "../../../Components/Assign/Transfer/TransferSurvey/SurveyResponse";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { ProgressBar } from "../Components/TransferSurvey/ProgressBar";
-import { AlertModal } from "../GlobalStyle/AlertModal";
+import { ProgressBar } from "../../../Components/Assign/Transfer/TransferSurvey/ProgressBar";
+import { AlertModal } from "../../../GlobalStyle/AlertModal";
 
 export const EstateSurvey = () => {
   const navigate = useNavigate();

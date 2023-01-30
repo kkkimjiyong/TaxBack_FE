@@ -11,10 +11,11 @@ export const Main = () => {
   const navigate = useNavigate();
   return (
     <Layout>
+      {" "}
       <BackGroundImg src={BackGroundLogo} alt={"바탕로고"} />
       <Wrap>
-        <Img src={TaxBackRowLogo} alt="로고" />
-
+        {" "}
+        <Img src={TaxBackRowLogo} alt="로고" />{" "}
         <MainTextBox>
           TaxBack에서
           <br />
@@ -40,23 +41,35 @@ export const Main = () => {
 };
 
 const Wrap = styled.div`
-  width: 85%;
+  position: relative;
+  width: 80%;
   height: 100%;
   .boxLogo {
     @media screen and (max-height: 819px) {
       transform: scale(0.7);
     }
+    @media screen and (max-height: 735px) {
+      width: 50%;
+      margin-left: 25%;
+    }
+    @media screen and (max-height: 693px) {
+      display: none;
+    }
+
     transform: scale(1);
-    margin-left: 16%;
+    margin-left: 15%;
     margin-bottom: 4%;
   }
   .kakao {
     transform: scale(1);
     width: 92%;
     margin-left: 3%;
-    margin-top: 21%;
+    margin-top: 30%;
     @media screen and (max-height: 819px) {
       margin-top: 1%;
+    }
+    @media screen and (max-height: 693px) {
+      margin-top: 25%;
     }
   }
 `;

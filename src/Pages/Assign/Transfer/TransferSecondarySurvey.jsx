@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
-import { Layout } from "../GlobalStyle/Layout";
-import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
+import { Layout } from "../../../GlobalStyle/Layout";
+import { SurveyHeader } from "../../../GlobalStyle/SurveyHeader";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import {
   SecondaryHouseSurvey,
   SecondaryLandSurvey,
-} from "../Assets/Survey/TransferSecondarySurvey";
+} from "../../../Assets/Survey/TransferSecondarySurvey";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 export const SecondarySurvey = () => {

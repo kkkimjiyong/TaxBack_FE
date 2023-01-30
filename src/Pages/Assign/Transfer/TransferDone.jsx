@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Layout } from "../GlobalStyle/Layout";
-import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
+import { Layout } from "../../../GlobalStyle/Layout";
+import { SurveyHeader } from "../../../GlobalStyle/SurveyHeader";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import TransferImage1 from "../Assets/Image/Transfer_Done.png";
+import TransferImage1 from "../../../Assets/Image/Transfer_Done.png";
 import { useNavigate } from "react-router-dom";
 
 export const TransferDone = () => {

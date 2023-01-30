@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
+import { SurveyHeader } from "../../GlobalStyle/SurveyHeader";
 import { useNavigate, useParams } from "react-router-dom";
-import { Layout } from "../GlobalStyle/Layout";
+import { Layout } from "../../GlobalStyle/Layout";
 
-export const SurveyStart = () => {
+export const AssignStart = () => {
   const navigate = useNavigate();
   const { type } = useParams();
 
@@ -19,7 +19,7 @@ export const SurveyStart = () => {
     <Layout>
       <Wrap>
         <SurveyHeader
-          undoPage={"/survey/select"}
+          undoPage={"/survey/select/assign"}
           title={`${SurveyType} 환급받기`}
         />
         <ConsultingBox>

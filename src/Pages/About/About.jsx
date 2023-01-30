@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Layout } from "../GlobalStyle/Layout";
-import { MainHeader } from "../GlobalStyle/MainHeader";
+import { Layout } from "../../GlobalStyle/Layout";
+import { MainHeader } from "../../GlobalStyle/MainHeader";
 import { IoIosArrowForward } from "react-icons/io";
-import { NavBar } from "../GlobalStyle/NavBar";
+import { NavBar } from "../../GlobalStyle/NavBar";
+import { useNavigate } from "react-router-dom";
 
-export const More = () => {
+export const About = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <Wrap>
@@ -38,7 +41,9 @@ export const More = () => {
           <GridBox>버전 2.72 (최신)</GridBox>
         </FlexBox>
         <HelpText>도움이 필요하신가요?</HelpText>
-        <HelpCallBtn>1:1 문의하기</HelpCallBtn>
+        <HelpCallBtn onClick={() => navigate("/about/counsel")}>
+          1:1 문의하기
+        </HelpCallBtn>
         <QuitText>탈퇴하기</QuitText>
       </Wrap>
 

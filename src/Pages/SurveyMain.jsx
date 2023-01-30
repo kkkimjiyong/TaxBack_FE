@@ -11,6 +11,7 @@ import { MainHeader } from "../GlobalStyle/MainHeader";
 const SurveyMain = () => {
   const navigate = useNavigate();
 
+  // 기존 택스백 url로 연결
   const TaxBack = () => {
     window.location.href = "https://apply.tax-back.kr/";
   };
@@ -25,13 +26,18 @@ const SurveyMain = () => {
         <ButtonLabel>
           <span>법인세, 소득세</span> 환급을 원하세요?
         </ButtonLabel>
-        <LookUpButton onClick={TaxBack}>사업자 세금 환급받기</LookUpButton>
+        <LookUpButton
+          onClick={() => navigate("/survey/select/business")}
+          // onClick={TaxBack}
+        >
+          사업자 세금 환급받기
+        </LookUpButton>
       </ButtonCtn>
       <ButtonCtn>
         <ButtonLabel>
           <span>양도세, 종부세</span> 환급을 원하세요?
         </ButtonLabel>
-        <LookUpButton onClick={() => navigate("/survey/select")}>
+        <LookUpButton onClick={() => navigate("/survey/select/assign")}>
           <span></span>양도세 및 종부세 환급받기
         </LookUpButton>
       </ButtonCtn>

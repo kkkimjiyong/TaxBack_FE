@@ -1,40 +1,18 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
+import { SelectBody } from "../Components/SurveySelectType/SelectBody";
 import { Layout } from "../GlobalStyle/Layout";
 import { NavBar } from "../GlobalStyle/NavBar";
 import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
 
 export const SelectSurveyType = () => {
-  const navigate = useNavigate();
-
-  // 평균 환급액
-  let average = 1234567;
-  let averageNumber = average.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // 사업자세금이냐 양도세 및 종부세냐에 따라 달라짐
+  const { kind } = useParams();
 
   return (
     <Layout>
-      <SurveyHeader
-        undoPage={"/survey"}
-        title={"양도소득세 및 종부세 환급받기"}
-      />
-      <Wrap>
-        <ContentBox>
-          세무법인 프라이어의 <br />
-          세무사들에게
-          <br />
-          평균 <span>{averageNumber}</span>원을
-          <br />
-          환급 받았어요
-        </ContentBox>
-        <SelectBtn onClick={() => navigate("/survey/start/transfer")}>
-          양도소득세로 환급받기
-        </SelectBtn>
-        <SelectBtn onClick={() => navigate("/survey/start/estate")}>
-          종합부동산세로 환급받기
-        </SelectBtn>
-      </Wrap>
-      <NavBar />
+      <SelectBody kind={kind} />
     </Layout>
   );
 };
@@ -51,7 +29,7 @@ const Wrap = styled.div`
 const ContentBox = styled.div`
   text-align: center;
   width: 90%;
-  padding: 10% 0;
+  padding: 5% 0;
   margin-bottom: 10%;
   border-radius: 20px;
   color: var(--color-thickSub);
@@ -70,6 +48,12 @@ const SelectBtn = styled.div`
   border: 1px solid var(--color-main);
   height: 60px;
   border-radius: 40px;
+  :hover {
+    background-color: var(--color-main);
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+  }
 `;
 
 const SelectBox = styled.div`
