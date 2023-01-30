@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SurveyMain from "../Pages/SurveyMain";
 import { TransferSurvey } from "../Pages/Assign/Transfer/TransferSurvey";
-import { AssignStart, SurveyStart } from "../Pages/Assign/AssignStart";
+import { AssignStart } from "../Pages/Assign/AssignStart";
 import { SurveyVerify } from "../Pages/SurveyVerify";
 import { SecondarySurvey } from "../Pages/Assign/Transfer/TransferSecondarySurvey";
 import { TransferSurveyResult } from "../Pages/Assign/Transfer/TransferSurveyResult";

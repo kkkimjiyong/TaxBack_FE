@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Layout } from "../../GlobalStyle/Layout";
-import { MainHeader } from "../../GlobalStyle/MainHeader";
+import { Layout } from "../../Global/Layout";
+import { MainHeader } from "../../Global/MainHeader";
 import { IoIosArrowForward } from "react-icons/io";
-import { NavBar } from "../../GlobalStyle/NavBar";
+import { NavBar } from "../../Global/NavBar";
 import { useNavigate } from "react-router-dom";
 
 export const About = () => {

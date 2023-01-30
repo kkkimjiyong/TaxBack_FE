@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { SurveyHeader } from "../../GlobalStyle/SurveyHeader";
+import { SurveyHeader } from "../../Global/SurveyHeader";
 import { useNavigate, useParams } from "react-router-dom";
-import { Layout } from "../../GlobalStyle/Layout";
+import { Layout } from "../../Global/Layout";
 
 export const AssignStart = () => {
   const navigate = useNavigate();

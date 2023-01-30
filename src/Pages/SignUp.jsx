@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Layout } from "../GlobalStyle/Layout";
-import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
+import { Layout } from "../Global/Layout";
+import { SurveyHeader } from "../Global/SurveyHeader";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";

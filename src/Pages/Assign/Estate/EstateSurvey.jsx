@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import { Estate_SurveyList } from "../../../Assets/Survey/EstateSurveyList";
-import { Layout } from "../../../GlobalStyle/Layout";
-import { SurveyHeader } from "../../../GlobalStyle/SurveyHeader";
+import { Layout } from "../../../Global/Layout";
+import { SurveyHeader } from "../../../Global/SurveyHeader";
 import { SurveyResponse } from "../../../Components/Assign/Transfer/TransferSurvey/SurveyResponse";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { ProgressBar } from "../../../Components/Assign/Transfer/TransferSurvey/ProgressBar";
-import { AlertModal } from "../../../GlobalStyle/AlertModal";
+import { AlertModal } from "../../../Global/AlertModal";
 
 export const EstateSurvey = () => {
   const navigate = useNavigate();

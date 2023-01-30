@@ -3,8 +3,8 @@ import styled from "styled-components";
 import HomeTaxLogo from "../Assets/Image/HomeTax_Logo.png";
 import { TbCertificate } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
-import { Layout } from "../GlobalStyle/Layout";
-import { SurveyHeader } from "../GlobalStyle/SurveyHeader";
+import { Layout } from "../Global/Layout";
+import { SurveyHeader } from "../Global/SurveyHeader";
 import { useParams } from "react-router-dom";
 
 export const SurveyVerify = () => {

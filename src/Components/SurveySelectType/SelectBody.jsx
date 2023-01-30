@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { NavBar } from "../../GlobalStyle/NavBar";
-import { SurveyHeader } from "../../GlobalStyle/SurveyHeader";
+import { NavBar } from "../../Global/NavBar";
+import { SurveyHeader } from "../../Global/SurveyHeader";
 import { BusinessModal } from "../Business/BusinessModal";
 import { AssignButton } from "./AssignButton";
 

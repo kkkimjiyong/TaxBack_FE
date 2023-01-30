@@ -4,7 +4,7 @@ import TaxBackRowLogo from "../Assets/Image/Taxback_Main_Logo.png";
 import TaxBackMainBoxLogo from "../Assets/Image/Taxback_Main_Box.png";
 import KaKaoLogin from "../Assets/Image/kakao_login_medium_wide.png";
 import BackGroundLogo from "../Assets/Image/BackGround_Logo.png";
-import { Layout } from "../GlobalStyle/Layout";
+import { Layout } from "../Global/Layout";
 import { useNavigate } from "react-router-dom";
 
 export const Main = () => {

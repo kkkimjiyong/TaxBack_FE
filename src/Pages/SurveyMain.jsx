@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Layout } from "../GlobalStyle/Layout";
+import { Layout } from "../Global/Layout";
 import TaxBackColumnLogo from "../Assets/Image/logo_Column_TaxBack.png";
 import TaxBackRowLogo from "../Assets/Image/logo_TaxBack.png";
 import BackGroundLogo from "../Assets/Image/BackGround_Logo.png";
-import { NavBar } from "../GlobalStyle/NavBar";
+import { NavBar } from "../Global/NavBar";
 import { useNavigate } from "react-router-dom";
-import { MainHeader } from "../GlobalStyle/MainHeader";
+import { MainHeader } from "../Global/MainHeader";
 
 const SurveyMain = () => {
   const navigate = useNavigate();

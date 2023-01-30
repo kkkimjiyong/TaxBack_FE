@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Layout } from "../../GlobalStyle/Layout";
-import { SurveyHeader } from "../../GlobalStyle/SurveyHeader";
+import { Layout } from "../../Global/Layout";
+import { SurveyHeader } from "../../Global/SurveyHeader";
 import { IoIosArrowForward } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 

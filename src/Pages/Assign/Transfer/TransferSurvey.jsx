@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import { Transfer_SurveyList } from "../../../Assets/Survey/TransferSurveyList";
-import { Layout } from "../../../GlobalStyle/Layout";
+import { Layout } from "../../../Global/Layout";
 import { SurveyResponse } from "../../../Components/Assign/Transfer/TransferSurvey/SurveyResponse";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { ProgressBar } from "../../../Components/Assign/Transfer/TransferSurvey/ProgressBar";
-import { SurveyHeader } from "../../../GlobalStyle/SurveyHeader";
+import { SurveyHeader } from "../../../Global/SurveyHeader";
 
 export const TransferSurvey = () => {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Layout } from "../../../GlobalStyle/Layout";
-import { SurveyHeader } from "../../../GlobalStyle/SurveyHeader";
+import { Layout } from "../../../Global/Layout";
+import { SurveyHeader } from "../../../Global/SurveyHeader";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import TransferImage1 from "../../../Assets/Image/Transfer_Done.png";
 import { useNavigate } from "react-router-dom";
