@@ -58,7 +58,7 @@ const Wrap = styled.div`
 const ContentTxt = styled.div`
   width: 90%;
   font-weight: 600;
-  margin-top: 10%;
+  margin-top: 5%;
   &.top {
     margin-top: 40%;
   }

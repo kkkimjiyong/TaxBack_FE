@@ -37,7 +37,6 @@ body {
 
 }
 span {
-    margin-right:10px;
     color: #8563f5;
 // dark 클래스 부여하면 더 짙은 텍스트
 &.dark{

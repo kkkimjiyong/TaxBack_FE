@@ -59,8 +59,8 @@ export const SignUp = () => {
           {" "}
           <Label for="name">이름</Label>
           <Input type={"text"} placeholder="예) 홍길동" {...register("name")} />
-          {errors.name && <ErrorTxt>{errors.name.message}</ErrorTxt>}
-        </InputBox>
+        </InputBox>{" "}
+        {errors.name && <ErrorTxt>{errors.name.message}</ErrorTxt>}
         <InputBox>
           <Label for="phoneNumber">휴대 전화번호</Label>
           <Input
@@ -68,10 +68,10 @@ export const SignUp = () => {
             placeholder="휴대 전화번호를 입력해주세요"
             {...register("phoneNumber")}
           />
-          {errors.phoneNumber && (
-            <ErrorTxt>{errors.phoneNumber.message}</ErrorTxt>
-          )}
-        </InputBox>
+        </InputBox>{" "}
+        {errors.phoneNumber && (
+          <ErrorTxt>{errors.phoneNumber.message}</ErrorTxt>
+        )}
         <InputBox>
           <Label for="email">이메일</Label>
           <Input
@@ -79,8 +79,8 @@ export const SignUp = () => {
             placeholder="예) abc@gmail.com"
             {...register("email")}
           />{" "}
-          {errors.email && <ErrorTxt>{errors.email.message}</ErrorTxt>}
-        </InputBox>
+        </InputBox>{" "}
+        {errors.email && <ErrorTxt>{errors.email.message}</ErrorTxt>}
         <InputBox>
           {" "}
           <Label for="password">비밀번호</Label>
@@ -89,8 +89,8 @@ export const SignUp = () => {
             placeholder="영문, 숫자, 특수문자 조합 8~16자"
             {...register("password")}
           />
-          {errors.password && <ErrorTxt>{errors.password.message}</ErrorTxt>}
-        </InputBox>
+        </InputBox>{" "}
+        {errors.password && <ErrorTxt>{errors.password.message}</ErrorTxt>}
         <InputBox>
           <Label for="passwordConfirm">비밀번호 확인</Label>
           <Input
@@ -98,10 +98,10 @@ export const SignUp = () => {
             placeholder="비밀번호를 한번 더 입력해주세요"
             {...register("passwordConfirm")}
           />{" "}
-          {errors.passwordConfirm && (
-            <ErrorTxt>{errors.passwordConfirm.message}</ErrorTxt>
-          )}
-        </InputBox>
+        </InputBox>{" "}
+        {errors.passwordConfirm && (
+          <ErrorTxt>{errors.passwordConfirm.message}</ErrorTxt>
+        )}
         <InputBox>
           <InputTitleBox>
             <Label for="recommend">추천인 아이디</Label>
@@ -138,15 +138,17 @@ const Wrap = styled.div`
   align-items: center;
   margin-top: 33%;
   width: 90%;
-  height: 80%;
+  height: 65%;
+  padding: 5% 0;
   overflow-y: auto;
 `;
 
 const InputBox = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   border-radius: 10px;
-  margin: 10px 0;
+  margin: 15px 0;
   width: 90%;
   height: 8%;
   padding: 5%;
@@ -166,6 +168,7 @@ const Label = styled.label`
 const ErrorTxt = styled.div`
   display: flex;
   align-items: center;
+  width: 90%;
   font-size: 14px;
   color: var(--color-main);
 `;
@@ -175,5 +178,5 @@ const Input = styled.input`
   border: none;
   background-color: transparent;
   height: 100%;
-  padding: 4% 1%;
+  padding: 2% 1%;
 `;

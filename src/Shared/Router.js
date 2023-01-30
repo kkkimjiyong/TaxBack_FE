@@ -15,12 +15,14 @@ import { SignUp } from "../Pages/SignUp";
 import { IndividualRefund } from "../Pages/IndividualRefund";
 import { Counsel } from "../Pages/About/Counsel";
 import { CounselRequest } from "../Pages/About/CounselRequest";
+import { Certify } from "../Pages/Certify";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/certify" element={<Certify />} />
         <Route path="/about" element={<About />} />
         <Route path="/about/counsel" element={<Counsel />} />
         <Route path="/about/counsel/request" element={<CounselRequest />} />

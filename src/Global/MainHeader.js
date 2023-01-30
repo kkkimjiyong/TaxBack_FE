@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { BsFillBellFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 export const MainHeader = ({ title }) => {
+  const navigate = useNavigate();
   return (
     <Wrap>
       <HeaderTxt> {title}</HeaderTxt>
 
       <FlexBox>
-        <ShareBox>공동인증센터</ShareBox>{" "}
+        <ShareBox onClick={() => navigate("/certify")}>공동인증센터</ShareBox>{" "}
         <BsFillBellFill className="icon" size={30} />
       </FlexBox>
     </Wrap>

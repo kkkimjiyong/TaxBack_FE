@@ -42,7 +42,7 @@ export const SelectBody = ({ kind }) => {
         <AssignButton type={"corporation"} setModal={setModal} />
       )}
       {kind === "assign" && (
-        <SelectBtn onClick={() => navigate(`/survey/start/assign/"estate"`)}>
+        <SelectBtn onClick={() => navigate(`/survey/start/assign/estate`)}>
           종합부동산세로 환급받기
         </SelectBtn>
       )}
