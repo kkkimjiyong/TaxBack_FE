@@ -25,7 +25,7 @@ export const About = () => {
             <IoIosArrowForward className="icon" size={30} />
           </MoreList>
           <MoreList>
-            알림 성정
+            알림 설정
             <IoIosArrowForward className="icon" size={30} />
           </MoreList>
           <MoreList>

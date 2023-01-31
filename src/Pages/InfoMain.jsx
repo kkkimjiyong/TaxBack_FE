@@ -9,9 +9,12 @@ import InfoMain4 from "../Assets/Image/Transfer_Done.png";
 import { MainHeader } from "../Global/MainHeader";
 import styled from "styled-components";
 import { NavBar } from "../Global/NavBar";
+import { useNavigate } from "react-router-dom";
 
 // 간헐적으로 코드가 너무 길어질 것 같아, 클래스네임을 썼습니다.
 export const InfoMain = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <HeaderBox>
@@ -26,7 +29,9 @@ export const InfoMain = () => {
           세무법인 프라이어에서 <br />
           숨어있던 <span>100만원</span>을 찾아보세요
         </FirstTxtBox>
-        <FirstBtn>환급 받으러 가기</FirstBtn>
+        <FirstBtn onClick={() => navigate("/survey")}>
+          환급 받으러 가기
+        </FirstBtn>
         <SecondCtn>
           <img className="priorlogo" src={PriorLogo} alt="prior" />
           <img className="priorpeople" src={PriorPeople} alt="대표님들" />
@@ -180,7 +185,9 @@ export const InfoMain = () => {
             <br />
             숨은 환급금을 찾아보세요!
           </div>
-          <FirstBtn className="fifth">환급 받으러 가기</FirstBtn>
+          <FirstBtn onClick={() => navigate("/survey")} className="fifth">
+            환급 받으러 가기
+          </FirstBtn>
         </FifthCtn>
       </Wrap>
       <NavBar />
@@ -247,6 +254,9 @@ const FirstBtn = styled.div`
   margin-right: 50%;
   &.fifth {
     margin-bottom: 0;
+  }
+  :hover {
+    cursor: pointer;
   }
 `;
 
