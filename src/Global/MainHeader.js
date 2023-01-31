@@ -43,6 +43,11 @@ const ShareBox = styled.div`
   width: 100px;
   border-radius: 25px;
   margin-right: 15px;
+  :hover {
+    cursor: pointer;
+    background-color: var(--color-sub);
+    color: white;
+  }
 `;
 
 const FlexBox = styled.div`

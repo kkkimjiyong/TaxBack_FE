@@ -16,17 +16,21 @@ import { IndividualRefund } from "../Pages/IndividualRefund";
 import { Counsel } from "../Pages/About/Counsel";
 import { CounselRequest } from "../Pages/About/CounselRequest";
 import { Certify } from "../Pages/Certify";
+import { SignUpDone } from "../Pages/SignUpDone";
+import { Login } from "../Pages/Login";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/certify" element={<Certify />} />
         <Route path="/about" element={<About />} />
         <Route path="/about/counsel" element={<Counsel />} />
         <Route path="/about/counsel/request" element={<CounselRequest />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup/done" element={<SignUpDone />} />
         <Route path="/survey" element={<SurveyMain />} />
         <Route path="/survey/refund" element={<IndividualRefund />} />
         <Route path="/survey/start/assign/:type" element={<AssignStart />} />

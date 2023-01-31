@@ -25,7 +25,7 @@ export const Certify = () => {
         <TitleHelp>환급을 받기 위해선 인증이 필요해요</TitleHelp>
         <ContentBox>
           <ButtonLabel>
-            <span>법인 사업자 세금</span> 환급을 원한다면
+            <span>법인 사업자 </span>세금 환급을 원한다면
           </ButtonLabel>
           <CertifyBtn>공동 인증하기</CertifyBtn>
           <ButtonLabel>
@@ -47,7 +47,7 @@ const Wrap = styled.div`
 
 const Header = styled.div`
   width: 100%;
-  margin: 5% 0;
+  margin: 3% 0;
   display: flex;
   align-items: center;
   justify-content: space-between;

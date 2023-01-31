@@ -11,9 +11,10 @@ export const About = () => {
 
   return (
     <Layout>
+      {" "}
+      <MainHeader title={"더 보기"} />
       <Wrap>
         {" "}
-        <MainHeader title={"더 보기"} />
         <MoreCtn>
           <MoreList>
             내 환급 신청 내역
@@ -46,7 +47,6 @@ export const About = () => {
         </HelpCallBtn>
         <QuitText>탈퇴하기</QuitText>
       </Wrap>
-
       <NavBar />
     </Layout>
   );
@@ -60,8 +60,11 @@ const Wrap = styled.div`
   overflow-y: hidden;
   overflow-y: scroll;
   width: 100%;
-  height: 85%;
-  margin-top: 5%;
+  height: 78%;
+  @media screen and (max-height: 730px) {
+    height: 72%;
+    margin-top: 3%;
+  }
 `;
 
 const MoreCtn = styled.div`
@@ -70,12 +73,16 @@ const MoreCtn = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 7%;
 `;
 
 const MoreList = styled.div`
   font-weight: 500;
   width: 87%;
   padding: 5% 0%;
+  @media screen and (max-height: 730px) {
+    padding: 3% 0%;
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -109,6 +116,11 @@ const GridBox = styled.div`
   width: 100%;
   height: 100%;
   background-color: #f4f2fd;
+  :hover {
+    cursor: pointer;
+    background-color: var(--color-main);
+    color: white;
+  }
 `;
 
 const HelpText = styled.div`
@@ -134,7 +146,7 @@ const HelpCallBtn = styled.div`
 `;
 
 const QuitText = styled.div`
-  margin-top: 5%;
+  margin: 3% 0;
   font-size: 14px;
   color: var(--color-gray);
   :hover {

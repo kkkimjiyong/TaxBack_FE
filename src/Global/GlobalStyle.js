@@ -6,6 +6,7 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.125rem;
     font-weight: 500;
+    overflow: overlay;
 }
 :root {
     //메인컬러

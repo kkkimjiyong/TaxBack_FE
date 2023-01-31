@@ -112,7 +112,7 @@ export const SignUp = () => {
             {...register("recommend")}
           />
         </InputBox>
-        <div>
+        <CheckCtn className="allCheck">
           <input
             id="allCheck"
             type={"checkbox"}
@@ -123,12 +123,13 @@ export const SignUp = () => {
             }}
           />{" "}
           <label for="allCheck">아래 약관에 모두 동의합니다</label>
-        </div>
-        <div>
+        </CheckCtn>
+        <CheckCtn>
           <input id="essential" type={"checkbox"} checked={essential} />{" "}
           <label for="essential">[필수] 이용약관 동의</label>
-        </div>
+        </CheckCtn>
       </Wrap>
+      <DoneBtn>회원가입 완료</DoneBtn>
     </Layout>
   );
 };
@@ -136,10 +137,10 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 33%;
+  margin-top: 35%;
   width: 90%;
   height: 65%;
-  padding: 5% 0;
+  padding-bottom: 5%;
   overflow-y: auto;
 `;
 
@@ -158,6 +159,13 @@ const InputBox = styled.div`
 const InputTitleBox = styled.div`
   display: flex;
 `;
+const Input = styled.input`
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  padding: 2% 1%;
+`;
 
 const Label = styled.label`
   font-size: 20px;
@@ -173,10 +181,29 @@ const ErrorTxt = styled.div`
   color: var(--color-main);
 `;
 
-const Input = styled.input`
-  font-size: 16px;
+const CheckCtn = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &.allCheck {
+    font-size: 20px;
+    color: var(--color-main);
+    margin-bottom: 2%;
+  }
+`;
+
+const DoneBtn = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 3% 0;
+  padding: 3%;
   border: none;
-  background-color: transparent;
-  height: 100%;
-  padding: 2% 1%;
+  border-radius: 25px;
+  background-color: var(--color-gray);
+  color: white;
+  :hover {
+    background-color: var(--color-main);
+  }
 `;

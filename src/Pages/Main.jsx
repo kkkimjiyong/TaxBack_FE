@@ -71,6 +71,9 @@ const Wrap = styled.div`
     @media screen and (max-height: 693px) {
       margin-top: 25%;
     }
+    :hover {
+      cursor: pointer;
+    }
   }
 `;
 
@@ -113,5 +116,7 @@ const SmallTextBox = styled.div`
   border-radius: 25px;
   :hover {
     cursor: pointer;
+    background-color: var(--color-main);
+    color: white;
   }
 `;

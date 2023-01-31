@@ -17,60 +17,69 @@ export const TransferDone = () => {
   return (
     <Layout>
       <SurveyHeader title={"양도소득세 상담 신청 완료"} />
-      <CheckBox>
-        <BsFillCheckCircleFill className="icon" size={32} />
-      </CheckBox>
-      <ClientName>홍길동님</ClientName>
-      <DoneText>양도소득세 무료 상담 요청을 완료하였습니다.</DoneText>
-      <InfoBox>
-        <InfoTitle>상담 요청일</InfoTitle>
-        <InfoDetail>{requestDate}</InfoDetail>
-      </InfoBox>
-      <InfoBox>
-        <FlexBox>
-          <div className="content">
-            {" "}
-            <InfoTitle>연락 가능한 번호</InfoTitle>{" "}
-            <InfoDetail>{requestPhoneNumber}</InfoDetail>
-          </div>
-          <InfoButton>버튼</InfoButton>
-        </FlexBox>
+      <Wrap>
+        <CheckBox>
+          <BsFillCheckCircleFill className="icon" size={32} />
+        </CheckBox>
+        <ClientName>홍길동님</ClientName>
+        <DoneText>양도소득세 무료 상담 요청을 완료하였습니다.</DoneText>
+        <InfoBox>
+          <InfoTitle>상담 요청일</InfoTitle>
+          <InfoDetail>{requestDate}</InfoDetail>
+        </InfoBox>
+        <InfoBox>
+          <FlexBox>
+            <div className="content">
+              {" "}
+              <InfoTitle>연락 가능한 번호</InfoTitle>{" "}
+              <InfoDetail>{requestPhoneNumber}</InfoDetail>
+            </div>
+            <InfoButton>버튼</InfoButton>
+          </FlexBox>
 
-        <InfoSub>
-          해당번호로 연락이 가요. 만약 다른 번호로 연락을 원하신다면 <br />
-          수정을 해주세요.
-        </InfoSub>
-      </InfoBox>
-      <InfoBox className="recommendId">
-        <FlexBox>
-          <div className="content">
-            <InfoTitle> 추천인 아이디</InfoTitle>
-            <input
-              className="recommendInput"
-              placeholder="추천인 아이디를 입력하세요"
-            />
-          </div>
+          <InfoSub>
+            해당번호로 연락이 가요. 만약 다른 번호로 연락을 원하신다면 <br />
+            수정을 해주세요.
+          </InfoSub>
+        </InfoBox>
+        <InfoBox className="recommendId">
+          <FlexBox>
+            <div className="content">
+              <InfoTitle> 추천인 아이디</InfoTitle>
+              <input
+                className="recommendInput"
+                placeholder="추천인 아이디를 입력하세요"
+              />
+            </div>
 
-          <InfoButton className="recommendId">버튼</InfoButton>
+            <InfoButton className="recommendId">버튼</InfoButton>
+          </FlexBox>
+        </InfoBox>
+        <FlexBox className="ImageBottomBox">
+          <Img className="img" src={TransferImage1} alt="이미지" />
+          <div className="ImageBottomTxt">
+            세금 환급 담당자가 <br />
+            빠른 시일 내에 연락드릴게요
+          </div>
         </FlexBox>
-      </InfoBox>
-      <FlexBox className="ImageBottomBox">
-        <Img src={TransferImage1} alt="이미지" />
-        <div className="ImageBottomTxt">
-          세금 환급 담당자가 <br />
-          빠른 시일 내에 연락드릴게요
-        </div>
-      </FlexBox>
-      <ButtonBox>
-        <HomeButton onClick={() => navigate("/")}>홈으로</HomeButton>
-        <NextBtn>상담 신청 내역 보기</NextBtn>
-      </ButtonBox>
+        <ButtonBox>
+          <HomeButton onClick={() => navigate("/")}>홈으로</HomeButton>
+          <NextBtn>상담 신청 내역 보기</NextBtn>
+        </ButtonBox>
+      </Wrap>
     </Layout>
   );
 };
 
+const Wrap = styled.div`
+  width: 90%;
+  height: 80%;
+  padding: 4% 0;
+  margin-top: 30%;
+  overflow-y: scroll;
+`;
+
 const CheckBox = styled.div`
-  margin-top: 35%;
   width: 90%;
   .icon {
     color: var(--color-thickSub);
@@ -115,6 +124,9 @@ const FlexBox = styled.div`
   align-items: center;
   .content {
     width: 80%;
+  }
+  .img {
+    width: 25%;
   }
   &.ImageBottomBox {
     margin-top: 5%;
