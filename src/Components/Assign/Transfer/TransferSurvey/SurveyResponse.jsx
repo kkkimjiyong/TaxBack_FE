@@ -37,6 +37,9 @@ const Wrap = styled.div`
     font-weight: 600;
     border: 3px solid var(--color-main);
   }
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const SubTxt = styled.div`

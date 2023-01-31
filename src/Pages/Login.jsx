@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { Layout } from "../Global/Layout";
 import { IoIosArrowBack } from "react-icons/io";
 import LoginImage from "../Assets/Image/Login.png";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <IconBox>
-        <IoIosArrowBack size={30} />
+        <IoIosArrowBack onClick={() => navigate("/")} size={30} />
       </IconBox>
       <HeadTxt>로그인</HeadTxt>
       <Img src={LoginImage} alt="로그인" />

@@ -101,6 +101,7 @@ const LookUpButton = styled.div`
   background-color: var(--color-main);
   margin-top: 20px;
   :hover {
+    color: var(--color-lightSub);
     cursor: pointer;
   }
 `;

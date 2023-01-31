@@ -36,15 +36,17 @@ export const NavBar = () => {
 };
 
 const Wrap = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   font-weight: 600;
-  width: 100%;
-  height: 100px;
+  width: 500px;
+  margin: 0 auto;
+  padding: 5px 0;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 2px -5px 20px 0px gray;
+  box-shadow: 0px -15px 10px -10px gray;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: white;

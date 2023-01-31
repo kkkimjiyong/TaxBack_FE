@@ -16,11 +16,11 @@ export const About = () => {
       <Wrap>
         {" "}
         <MoreCtn>
-          <MoreList>
+          <MoreList onClick={() => navigate("/about/apply")}>
             내 환급 신청 내역
             <IoIosArrowForward className="icon" size={30} />
           </MoreList>
-          <MoreList>
+          <MoreList onClick={() => navigate("/about/editprofile")}>
             프로필 수정
             <IoIosArrowForward className="icon" size={30} />
           </MoreList>
@@ -90,6 +90,7 @@ const MoreList = styled.div`
   :hover {
     border-bottom: 1px solid #999999;
     font-weight: 600;
+    cursor: pointer;
   }
   .icon {
     color: var(--color-gray);

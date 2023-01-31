@@ -8,9 +8,12 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { ProgressBar } from "../../../Components/Assign/Transfer/TransferSurvey/ProgressBar";
 import { SurveyHeader } from "../../../Global/SurveyHeader";
+import { addSurveyResponse } from "../../../Redux/Modules/SurveySlice";
+import { useDispatch } from "react-redux";
 
 export const TransferSurvey = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // 새로고침 막기 변수
   const preventClose = (e) => {
@@ -72,6 +75,13 @@ export const TransferSurvey = () => {
             response: Transfer_SurveyList[process].responses[clicked].main,
           })
         );
+        dispatch(
+          addSurveyResponse({
+            question: Transfer_SurveyList[process].question,
+            response: Transfer_SurveyList[process].responses[clicked].main,
+          })
+        );
+
         // 설문조사가 끝나고, 추가 설문 알림구현
         if (process === totalProcess) {
           if (

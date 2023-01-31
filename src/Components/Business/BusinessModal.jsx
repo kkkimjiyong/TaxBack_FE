@@ -4,7 +4,9 @@ import styled from "styled-components";
 export const BusinessModal = ({ setModal, modal }) => {
   return (
     <Wrap modal={modal}>
-      <CloseBtn onClick={() => setModal(false)}>X</CloseBtn>
+      <CloseBtnBox onClick={() => setModal(false)}>
+        <div className="closeBtn">X</div>
+      </CloseBtnBox>
       <TitleBox>사업장 정보</TitleBox>
       <NoContentTxt>등록된 사업장 정보가 없어요</NoContentTxt>
       <PlusPlace>
@@ -29,11 +31,16 @@ const Wrap = styled.div`
   transition: all 600ms ease-in-out;
 `;
 
-const CloseBtn = styled.div`
+const CloseBtnBox = styled.div`
   padding: 3% 0;
   width: 90%;
   display: flex;
   justify-content: flex-end;
+  .closeBtn {
+    :hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 const TitleBox = styled.div`

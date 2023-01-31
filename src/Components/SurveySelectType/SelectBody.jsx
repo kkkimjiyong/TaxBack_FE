@@ -72,6 +72,14 @@ const ContentBox = styled.div`
   @media screen and (max-height: 730px) {
     margin-bottom: 5%;
   }
+  @media screen and (max-height: 680px) {
+    font-size: 14px;
+    height: 17%;
+    padding: 2% 0;
+  }
+  @media screen and (max-height: 630px) {
+    display: none;
+  }
   border-radius: 20px;
   color: var(--color-thickSub);
   background-color: var(--color-contentBox);

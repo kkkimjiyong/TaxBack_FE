@@ -18,15 +18,21 @@ import { CounselRequest } from "../Pages/About/CounselRequest";
 import { Certify } from "../Pages/Certify";
 import { SignUpDone } from "../Pages/SignUpDone";
 import { Login } from "../Pages/Login";
+import { Apply } from "../Pages/About/Apply";
+import { EditProfile } from "../Pages/About/EditProfile";
+import { InfoMain } from "../Pages/InfoMain";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/info" element={<InfoMain />} />
         <Route path="/login" element={<Login />} />
         <Route path="/certify" element={<Certify />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about/apply" element={<Apply />} />
+        <Route path="/about/editprofile" element={<EditProfile />} />
         <Route path="/about/counsel" element={<Counsel />} />
         <Route path="/about/counsel/request" element={<CounselRequest />} />
         <Route path="/signup" element={<SignUp />} />
