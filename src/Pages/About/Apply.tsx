@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout } from "../../Global/Layout";
-import { MainHeader } from "../../Global/MainHeader";
 import { SurveyHeader } from "../../Global/SurveyHeader";
 import { IoIosArrowForward } from "react-icons/io";
 import styled from "styled-components";

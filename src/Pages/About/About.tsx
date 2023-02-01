@@ -11,10 +11,8 @@ export const About = () => {
 
   return (
     <Layout>
-      {" "}
       <MainHeader title={"더 보기"} />
       <Wrap>
-        {" "}
         <MoreCtn>
           <MoreList onClick={() => navigate("/about/apply")}>
             내 환급 신청 내역

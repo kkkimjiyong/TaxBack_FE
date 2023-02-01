@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+// 함수 prop을 전달되기전까지 타입스크립트 보류
 export const AlertModal = ({
   rightButtonTxt,
   leftButtonTxt,

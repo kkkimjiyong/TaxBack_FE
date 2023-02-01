@@ -15,7 +15,7 @@ import { SignUp } from "../Pages/SignUp";
 import { IndividualRefund } from "../Pages/IndividualRefund";
 import { Counsel } from "../Pages/About/Counsel";
 import { CounselRequest } from "../Pages/About/CounselRequest";
-import { Certify } from "../Pages/Certify.tsx";
+import { Certify } from "../Pages/Certify";
 import { SignUpDone } from "../Pages/SignUpDone";
 import { Login } from "../Pages/Login";
 import { Apply } from "../Pages/About/Apply";

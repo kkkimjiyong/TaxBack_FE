@@ -1,8 +1,13 @@
 type TsurveyComponent = {
   type: string;
   question: string;
+
   questionSub?: string;
-  responses: object[];
+  responses: {
+    main: string;
+    secondQuestion?: string;
+    secondQuestionInput?: { title: string }[];
+  }[];
 };
 
 // 1단계

@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { boolean } from "yup";
 
-export const SelectModal = ({ selectModal }) => {
+export const SelectModal = ({ selectModal }: { selectModal: boolean }) => {
   return (
     <BackGroundModal selectModal={selectModal}>
       <Wrap selectModal={selectModal}>SelectModal</Wrap>;
@@ -9,7 +10,7 @@ export const SelectModal = ({ selectModal }) => {
   );
 };
 
-const BackGroundModal = styled.div`
+const BackGroundModal = styled.div<{ selectModal: boolean }>`
   height: ${({ selectModal }) => (selectModal ? "100%" : " 0%")};
   position: fixed;
   bottom: 0;
@@ -18,7 +19,7 @@ const BackGroundModal = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
 `;
 
-const Wrap = styled.div`
+const Wrap = styled.div<{ selectModal: boolean }>`
   position: absolute;
   z-index: 11;
   bottom: 0;

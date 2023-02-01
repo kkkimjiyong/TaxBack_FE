@@ -7,7 +7,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { GrFormClose } from "react-icons/gr";
 
 export const CounselRequest = () => {
-  const [selectModal, setSelectModal] = useState();
+  const [selectModal, setSelectModal] = useState<boolean>(false);
 
   return (
     <Layout>
