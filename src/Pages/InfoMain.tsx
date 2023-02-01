@@ -36,18 +36,17 @@ export const InfoMain = () => {
         <SecondCtn>
           <img className="priorlogo" src={PriorLogo} alt="prior" />
           <img className="priorpeople" src={PriorPeople} alt="대표님들" />
-          <div>
-            <SecondContentTitle>
-              세무법인 프라이어에는 수많은 <br />
-              세금 전문가들이 함께합니다.
-            </SecondContentTitle>
-            <SecondContentSub>
-              국세청 출신 및 분야 별 전문 세무사 9명,
-              <br />
-              숙련된 전문 세무 직원 50명이 최대한의 환급 금액을 <br />
-              찾아드리고 사후관리까지 책임집니다.
-            </SecondContentSub>
-          </div>
+
+          <SecondContentTitle>
+            세무법인 프라이어에는 수많은 <br />
+            세금 전문가들이 함께합니다.
+          </SecondContentTitle>
+          <SecondContentSub>
+            국세청 출신 및 분야 별 전문 세무사 9명,
+            <br />
+            숙련된 전문 세무 직원 50명이 최대한의 환급 금액을 <br />
+            찾아드리고 사후관리까지 책임집니다.
+          </SecondContentSub>
         </SecondCtn>
         <ThirdCtn>
           <ThirdTitle>
@@ -264,7 +263,8 @@ const FirstBtn = styled.div`
 `;
 
 const SecondCtn = styled.div`
-  padding: 12% 0;
+  width: 100%;
+  padding: 12% 0%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -285,10 +285,13 @@ const SecondContentTitle = styled.div`
   font-weight: 600;
   margin: 10% 0;
   color: white;
+  width: 90%;
 `;
 
 const SecondContentSub = styled.div`
   color: white;
+  width: 90%;
+  font-size: 16px;
 `;
 
 const ThirdCtn = styled.div`
@@ -381,12 +384,15 @@ const ThirdCommentBox = styled.div`
 `;
 
 const FourthCtn = styled.div`
-  width: 90%;
-  padding: 12% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 12% 0;
   background-color: #f2f1f6;
   .flex {
-    width: 100%;
-    padding: 0 5%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -397,11 +403,13 @@ const FourthCtn = styled.div`
     color: var(--color-main);
   }
   .content {
-    font-size: 16px;
+    margin-top: 5px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
     color: var(--color-thickSub);
   }
   .img1 {
-    width: 30%;
+    width: 35%;
   }
   .img2 {
     width: 35%;
