@@ -11,7 +11,8 @@ import styled from "styled-components";
 import { NavBar } from "../Global/NavBar";
 import { useNavigate } from "react-router-dom";
 
-// 간헐적으로 코드가 너무 길어질 것 같아, 클래스네임을 썼습니다.
+//! 간헐적으로 코드가 너무 길어질 것 같아, 클래스네임을 썼습니다.
+//! 컴포넌트를 나누려다가, 텍스트와 이미지를 보여주는 단순한 페이지이기 때문에 나누지 않았습니다.
 export const InfoMain = () => {
   const navigate = useNavigate();
 
