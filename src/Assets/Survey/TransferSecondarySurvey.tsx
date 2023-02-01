@@ -1,5 +1,7 @@
+type TSecondartObject = { type: String; question: String; placeholder: string };
+
 // 양도세 => 아파트 추가설문지
-export const SecondaryHouseSurvey = [
+export const SecondaryHouseSurvey: TSecondartObject[] = [
   {
     type: "house",
     question: "경정청구한 이유를 적어주세요",
@@ -16,7 +18,7 @@ export const SecondaryHouseSurvey = [
 
 // 양도세 => 토지 추가설문지
 
-export const SecondaryLandSurvey = [
+export const SecondaryLandSurvey: TSecondartObject[] = [
   {
     type: "land",
     question:

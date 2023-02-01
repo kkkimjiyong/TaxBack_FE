@@ -12,17 +12,17 @@ export const NavBar = () => {
     <Wrap>
       <FlexBox>
         <div>
-          <HiHome
-            className="icon"
-            onClick={() => navigate("/survey")}
-            size={26}
-          />
+          <HiHome className="icon" onClick={() => navigate("/")} size={26} />
         </div>
         홈
       </FlexBox>
       <FlexBox>
         <div>
-          <RiMoneyDollarCircleFill className="icon" size={26} />
+          <RiMoneyDollarCircleFill
+            onClick={() => navigate("/survey")}
+            className="icon"
+            size={26}
+          />
         </div>
         환급하기
       </FlexBox>
@@ -40,9 +40,10 @@ const Wrap = styled.div`
   position: fixed;
   bottom: 0;
   font-weight: 600;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
-  padding: 5px 0;
+  padding: 5px;
   height: 80px;
   display: flex;
   align-items: center;

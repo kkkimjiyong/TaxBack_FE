@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import { Layout } from "../../../Global/Layout";
@@ -10,12 +10,35 @@ import {
 } from "../../../Assets/Survey/TransferSecondarySurvey";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
+// 설문지 질문 타입
+type TSecondartObject = { type: String; question: String; placeholder: string };
+
 export const SecondarySurvey = () => {
+  // 새로고침 막기 변수
+  // 새로고침 이벤트객체 뭐엿더라/// 일단 any
+
+  const preventClose = (e: any) => {
+    e.preventDefault();
+    e.returnValue = ""; // chrome에서는 설정이 필요해서 넣은 코드
+  };
+
+  // 브라우저에 렌더링 시 한 번만 실행하는 코드
+  useEffect(() => {
+    (() => {
+      window.addEventListener("beforeunload", preventClose);
+    })();
+
+    return () => {
+      window.removeEventListener("beforeunload", preventClose);
+    };
+  }, []);
+
+  // ------------------- -------------------------
   const { type } = useParams();
   const navigate = useNavigate();
   console.log(type);
 
-  const [surveyList, setSurveyList] = useState([]);
+  const [surveyList, setSurveyList] = useState<TSecondartObject[]>([]);
   const CheckSurveyList = () => {
     if (type === "land") {
       setSurveyList(SecondaryLandSurvey);
@@ -33,16 +56,16 @@ export const SecondarySurvey = () => {
   }, []);
 
   //현재 진행도 상태값
-  const [process, setProcess] = useState(0);
+  const [process, setProcess] = useState<number>(0);
 
   //총 진행도 상태값
-  const [totalProcess, setTotalProcess] = useState();
+  const [totalProcess, setTotalProcess] = useState<number>(0);
 
   //현재 질문 응답데이터 상태값
-  const [response, setResponse] = useState("");
+  const [response, setResponse] = useState<string>("");
 
   //추가 설문 토탈 응답데이터 상태값
-  const [totalResponses, setTotalResponses] = useState([]);
+  const [totalResponses, setTotalResponses] = useState<string[]>([]);
 
   const BackButtonHandler = () => {
     if (process === 0) {
@@ -71,17 +94,21 @@ export const SecondarySurvey = () => {
 
   return (
     <Layout>
-      <SurveyHeader />
+      <SurveyHeader undoPage={"/survey"} />
       <QuestionBox>{surveyList[process]?.question}</QuestionBox>
       <TextArea
-        onChange={(e) => setResponse(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+          setResponse(e.target.value)
+        }
         placeholder="예: 일시적 2주택 상태로 비과세가 가능하다고 생각하였으나, 비과세 받지 못함."
       />
       <ButtonBox>
         <Button onClick={BackButtonHandler}>뒤로</Button>
         <NextBtn
+          written={response.length}
           onClick={NextButtonHandler}
-          className={response.length > 1 && "written"}
+          // className={response.length > 1 && "written"}
+          className="written"
         >
           다음
           <AiOutlineArrowRight className="icon" />
@@ -127,22 +154,16 @@ const Button = styled.div`
   }
 `;
 
-const NextBtn = styled.div`
+const NextBtn = styled.div<{ written: number }>`
   font-weight: 600;
   color: white;
   padding: 3% 22%;
   border-radius: 30px;
-  background-color: var(--color-gray);
+  background-color: ${({ written }) => (written > 1 ? " #4323A7" : "#aeaeae")};
   display: flex;
   align-items: center;
   .icon {
     margin-left: 10px;
-  }
-  &.written {
-    background-color: var(--color-main);
-    :hover {
-      cursor: pointer;
-    }
   }
   :hover {
     cursor: pointer;

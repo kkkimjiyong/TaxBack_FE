@@ -1,5 +1,12 @@
+type TsurveyComponent = {
+  type: string;
+  question: string;
+  questionSub?: string;
+  responses: object[];
+};
+
 // 1단계
-export const Estate_SurveyList = [
+export const Estate_SurveyList: TsurveyComponent[] = [
   // 1-1번 공통질문
   {
     type: "common",
@@ -22,7 +29,7 @@ export const Estate_SurveyList = [
 ];
 
 //! -------------------- 2단계 개인 + 주택의 경우 ---------------------------
-export const Person_House_SurveyList = [
+export const Person_House_SurveyList: TsurveyComponent[] = [
   // 1번 공통질문
   {
     type: "personHouse",
@@ -44,7 +51,7 @@ export const Person_House_SurveyList = [
 ];
 
 // 개인 + 주택의 경우 + 1세대 1주택
-export const Person_House_One_SurveyList = [
+export const Person_House_One_SurveyList: TsurveyComponent[] = [
   {
     type: "personHouseOne",
     question: "1주택 외에 최근에 양도했던 주택이 있습니까?",
@@ -63,7 +70,7 @@ export const Person_House_One_SurveyList = [
 ];
 
 // 개인 + 주택의 경우 + 2주택 + 임대사업자
-export const Person_House_Two_Business_SurveyList = [
+export const Person_House_Two_Business_SurveyList: TsurveyComponent[] = [
   {
     type: "personHouseTwoBusiness",
     question: "상속 또는 2년 이내 주택을 매입한 사실이 있습니까?",
@@ -90,7 +97,7 @@ export const Person_House_Two_Business_SurveyList = [
 ];
 
 // 개인 + 주택의 경우 + 2주택 + 임대사업자X
-export const Person_House_Two_Normal_SurveyList = [
+export const Person_House_Two_Normal_SurveyList: TsurveyComponent[] = [
   {
     type: "personHouseTwoNormal",
     question: "상속 또는 2년 이내 주택을 매입한 사실이 있습니까?",
@@ -113,7 +120,7 @@ export const Person_House_Two_Normal_SurveyList = [
 ];
 
 // 개인 + 주택의 경우 + 3주택이상 + 임대사업자X
-export const Person_House_Three_Normal_SurveyList = [
+export const Person_House_Three_Normal_SurveyList: TsurveyComponent[] = [
   {
     type: "personHouseTwoNormal",
     question:
@@ -132,7 +139,7 @@ export const Person_House_Three_Normal_SurveyList = [
 
 //? ------------------------ 2단계 개인 + 토지의 경우 ----------------------------
 
-export const Person_Land_SurveyList = [
+export const Person_Land_SurveyList: TsurveyComponent[] = [
   {
     type: "personLand",
     question:

@@ -1,4 +1,4 @@
-type basisList = {
+type TrefundBasisList = {
   title: String;
   subTitle: String;
   subDetailTitle: String;
@@ -6,7 +6,7 @@ type basisList = {
   textList: Array<string>;
 };
 
-export const refundBasisList: basisList = {
+export const refundBasisList: TrefundBasisList = {
   title: "근거 법문 요약",
   subTitle: "소득세법",
   subDetailTitle: "제15조 ",

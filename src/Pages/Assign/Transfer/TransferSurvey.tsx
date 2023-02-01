@@ -10,13 +10,14 @@ import { ProgressBar } from "../../../Components/Assign/Transfer/TransferSurvey/
 import { SurveyHeader } from "../../../Global/SurveyHeader";
 import { addSurveyResponse } from "../../../Redux/Modules/SurveySlice";
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../Redux/ConfigStore/ConfigStore";
 
 export const TransferSurvey = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   // 새로고침 막기 변수
-  const preventClose = (e) => {
+  const preventClose = (e: any) => {
     e.preventDefault();
     e.returnValue = ""; // chrome에서는 설정이 필요해서 넣은 코드
   };
@@ -33,16 +34,18 @@ export const TransferSurvey = () => {
   }, []);
 
   // 현재 진행도 상태값
-  const [process, setProcess] = useState(0);
+  const [process, setProcess] = useState<number>(0);
   // 총 진행도 (총 질문의 개수)
-  const [totalProcess, setTotalProcess] = useState(1);
+  const [totalProcess, setTotalProcess] = useState<number>(1);
   // 응답체크 판별하는 상태값
-  const [clicked, setClicked] = useState(-1);
-  const [checkClick, setCheckClick] = useState(false);
+  const [clicked, setClicked] = useState<number>(-1);
+  const [checkClick, setCheckClick] = useState<boolean>(false);
   // 설문지에 대한 응답값
-  const [responses, setResponses] = useState([]);
+  const [responses, setResponses] = useState<
+    { question: string; response: string }[]
+  >([]);
   // 설문지 타입정하는 상태값 (토지인지 주택인지)
-  const [surveyType, setSurveyType] = useState();
+  const [surveyType, setSurveyType] = useState<string>();
 
   // 질문 바뀌면, 응답 상태값 초기화
   const ResetResponse = () => {
@@ -51,7 +54,7 @@ export const TransferSurvey = () => {
   };
 
   //  뒤로가기 및 다음버튼 이벤트핸들러
-  const ButtonClickHandler = (direction) => {
+  const ButtonClickHandler = (direction: string) => {
     // process = 0 일 때, 설문지타입 체크 (토지인지 아파트인지)
     if (process === 0) {
       DivideQuestionHandler();
@@ -180,8 +183,6 @@ export const TransferSurvey = () => {
             {Transfer_SurveyList[process].responses.map((response, index) => {
               return (
                 <SurveyResponse
-                  process={process}
-                  setResponses={setResponses}
                   index={index}
                   clicked={clicked}
                   setClicked={setClicked}
@@ -195,8 +196,8 @@ export const TransferSurvey = () => {
           <ButtonBox>
             <Button onClick={() => ButtonClickHandler("back")}>뒤로</Button>
             <NextBtn
+              clicked={clicked}
               onClick={() => ButtonClickHandler("next")}
-              className={clicked !== -1 && "clicked"}
             >
               다음
               <AiOutlineArrowRight className="icon" />
@@ -269,23 +270,19 @@ const Button = styled.div`
   }
 `;
 
-const NextBtn = styled.div`
+const NextBtn = styled.div<{ clicked: number }>`
   font-weight: 600;
   color: white;
   padding: 3% 22%;
   border-radius: 30px;
-  background-color: var(--color-gray);
+  background-color: ${({ clicked }) =>
+    clicked !== -1 ? "#4323A7" : " #aeaeae"};
   display: flex;
   align-items: center;
   .icon {
     margin-left: 10px;
   }
-  &.clicked {
-    background-color: var(--color-main);
-    :hover {
-      cursor: pointer;
-    }
-  }
+
   :hover {
     cursor: pointer;
   }

@@ -10,13 +10,17 @@ export const TransferDone = () => {
   const navigate = useNavigate();
 
   //상담 요청일 상태값
-  const [requestDate, setRequestDate] = useState("2022-12-12 10:01");
+  const [requestDate, setRequestDate] = useState<string>("2022-12-12 10:01");
   //연락 가능한 번호 상태값
-  const [requestPhoneNumber, setRequestPhoneNumber] = useState("02-1234-5678");
+  const [requestPhoneNumber, setRequestPhoneNumber] =
+    useState<string>("02-1234-5678");
 
   return (
     <Layout>
-      <SurveyHeader title={"양도소득세 상담 신청 완료"} />
+      <SurveyHeader
+        undoPage={"/survey/transfer/result"}
+        title={"양도소득세 상담 신청 완료"}
+      />
       <Wrap>
         <CheckBox>
           <BsFillCheckCircleFill className="icon" size={32} />

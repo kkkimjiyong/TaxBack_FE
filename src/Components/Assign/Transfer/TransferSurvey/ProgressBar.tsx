@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-export const ProgressBar = ({ process, totalProcess }) => {
+export const ProgressBar = ({
+  process,
+  totalProcess,
+}: {
+  process: number;
+  totalProcess: number;
+}) => {
   return (
     <Wrap>
       <CurrentTxt>

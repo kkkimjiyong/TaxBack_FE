@@ -202,9 +202,11 @@ const Layout = styled.div`
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 100%;
 `;
 
@@ -223,11 +225,12 @@ const Wrap = styled.div`
 
 const HeaderBox = styled.div`
   margin-top: 5%;
+  padding: 0 2%;
   position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 96%;
   .img {
     width: 30%;
     margin-top: 3%;

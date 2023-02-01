@@ -1,5 +1,12 @@
+type TsurveyComponent = {
+  type: string;
+  question: string;
+  questionSub?: string;
+  responses: { main: string; sub?: string }[];
+};
+
 //양도세 질문리스트
-export const Transfer_SurveyList = [
+export const Transfer_SurveyList: TsurveyComponent[] = [
   //1번 공통질문
   {
     type: "common",
