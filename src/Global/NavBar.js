@@ -46,7 +46,7 @@ const Wrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 0px -15px 10px -10px gray;
+  box-shadow: 0px -12px 20px -15px gray;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: white;

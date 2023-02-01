@@ -5,6 +5,7 @@ import { SurveyHeader } from "../Global/SurveyHeader";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import axios from "axios";
 
 export const SignUp = () => {
   const [allCheck, setAllCheck] = useState(false);
@@ -41,6 +42,35 @@ export const SignUp = () => {
       .required("비밀번호를 확인해주세요."),
   });
 
+  // 서버 API 데이터 전송
+  const PostUser = async (userInfo) => {
+    try {
+      const response = axios.post("http://localhost:3001/signup", {
+        userInfo: userInfo,
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // get요청 연습
+  const GetUsers = async () => {
+    try {
+      const response = axios.get("http://localhost:3001/signup/users");
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // 회원가입 submit 핸들러
+  const SubmitHandler = () => {
+    console.log(getValues());
+    PostUser(getValues());
+    GetUsers();
+  };
+
   //useForm 설정
   const {
     register,
@@ -49,7 +79,7 @@ export const SignUp = () => {
     formState: { errors },
   } = useForm({
     mode: "onChange",
-    resolver: yupResolver(formSchema),
+    // resolver: yupResolver(formSchema),
   });
   return (
     <Layout>
@@ -129,7 +159,7 @@ export const SignUp = () => {
           <label for="essential">[필수] 이용약관 동의</label>
         </CheckCtn>
       </Wrap>
-      <DoneBtn>회원가입 완료</DoneBtn>
+      <DoneBtn onClick={handleSubmit(SubmitHandler)}>회원가입 완료</DoneBtn>
     </Layout>
   );
 };
