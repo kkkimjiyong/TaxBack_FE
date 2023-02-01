@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 type TuserInfo = {
   name: string;
@@ -17,6 +18,8 @@ type TuserInfo = {
 };
 
 export const SignUp = () => {
+  const navigate = useNavigate();
+
   const [allCheck, setAllCheck] = useState(false);
   const [essential, setEssential] = useState(false);
 
@@ -75,6 +78,7 @@ export const SignUp = () => {
 
   // 회원가입 submit 핸들러
   const SubmitHandler = (): void => {
+    navigate("/signup/done");
     console.log(getValues());
     PostUser(getValues());
     GetUsers();

@@ -333,7 +333,7 @@ const ThirdRefundBox = styled.div`
     display: flex;
   }
   .number {
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 400;
     text-align: start;
   }
@@ -358,6 +358,8 @@ const ThirdRefundBox = styled.div`
     font-size: 14px;
     padding-left: 1%;
     bottom: 0;
+    height: 15px;
+    color: var(--color-darkGray);
   }
 `;
 

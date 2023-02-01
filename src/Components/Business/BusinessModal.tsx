@@ -28,6 +28,7 @@ const Wrap = styled.div<{ modal: boolean }>`
   flex-direction: column;
   height: ${({ modal }) => (modal ? "30%" : "0%")};
   width: 100%;
+  padding: 3% 0;
   background-color: white;
   border-radius: 20px;
   box-shadow: 2px -5px 20px -5px gray;
@@ -38,7 +39,7 @@ const Wrap = styled.div<{ modal: boolean }>`
 `;
 
 const CloseBtnBox = styled.div`
-  padding: 3% 0;
+  padding: 1% 0;
   width: 90%;
   display: flex;
   justify-content: flex-end;

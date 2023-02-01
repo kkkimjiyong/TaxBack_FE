@@ -27,12 +27,12 @@ export const Main = () => {
         </MainTextBox>
         <img className="boxLogo" src={TaxBackMainBoxLogo} alt="박스로고" />
         <img
-          onClick={() => navigate("/survey")}
+          onClick={() => navigate("/signup")}
           className="kakao"
           src={KaKaoLogin}
           alt="카카오로그인"
         />
-        <SmallTextBox onClick={() => navigate("/survey")}>
+        <SmallTextBox onClick={() => navigate("/signup")}>
           이메일로 회원가입 | 로그인
         </SmallTextBox>
       </Wrap>

@@ -26,7 +26,7 @@ body {
     //회색컬러
     --color-gray:#aeaeae;
     //클릭 시, 진한회색컬러
-    --color-darkGray : #b5b5b5;
+    --color-darkGray : #6b6b6b;
     //폰트사이즈 스몰
     --font-small:0.9rem;
     //폰트사이즈 기본
